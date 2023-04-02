@@ -1,7 +1,8 @@
 ## yt_chat_gui
 
 PysimpleGUIで作られたChatボット向GUIの雛形
-[作者のTwitter](https://twitter.com/YoutechA320U)へお願いします。
+
+質問は[作者のTwitter](https://twitter.com/YoutechA320U)へお願いします。
 
 
 ## 履歴
