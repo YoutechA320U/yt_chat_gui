@@ -112,7 +112,7 @@ async def anime():
 
     
 
-async def bing():
+async def resmake():
     global response, question, reslist
     while True:
      await asyncio.sleep(0.01)
@@ -168,7 +168,7 @@ async def box():
 
 async def main():
     global task1, task2 ,task3
-    task1 = asyncio.create_task(bing())
+    task1 = asyncio.create_task(resmake())
     task2 = asyncio.create_task(anime())
     task3 = asyncio.create_task(box())
     await task1
