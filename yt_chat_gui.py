@@ -2,7 +2,7 @@ import asyncio
 from io import BytesIO
 from PIL import Image
 import PySimpleGUI as sg
-sg.theme("Reddit")
+#sg.theme("Reddit")
 
 def image_to_data(im):
 
@@ -51,20 +51,20 @@ def make_background(window, file, main_frame):
         
 bg = sg.theme_background_color()
 background_image_file = 'img_data/bg.png'
-w, h = size = 500, 500  # size of background image
+#w, h = size = 500, 500  # size of background image
 
 sg.set_options(dpi_awareness=True)
 
 frame = [
-         [sg.Image(filename = 'img_data/chara1.png', pad=((0,0),(0,100)), key='chara'),sg.Multiline(size=(46, 19.4), pad=((0,0),(0,0)), key='-OUT-', disabled=True, enable_events=True)],
-         [sg.Multiline(size=(40, 6), pad=((0,0),(0,0)),key='-IN-', enter_submits=False)],
+         [sg.Image(filename = 'img_data/chara1.png', pad=((0,8),(0,162)), key='chara'),sg.Multiline(size=(48, 19.4), pad=((0,0),(0,0)), key='-OUT-', disabled=True, enable_events=True)],
+         [sg.Multiline(size=(40, 6), pad=((0,0),(10,4)),key='-IN-', enter_submits=False)],
          [sg.Button('send',size=(10, 2), bind_return_key=True), sg.Button('exit', size=(10, 2))]
          ]
          
-layout=[[sg.Frame('',frame, size=(500, 500), border_width=0, key='FRAME')]]
+layout=[[sg.Frame('',frame, size=(500, 480), border_width=0, key='FRAME')]]
 location = sg.Window.get_screen_size()
 
-window = sg.Window('yt_chat_gui', layout, size=(500, 500),finalize=True)
+window = sg.Window('yt_chat_gui', layout, size=(500, 480),finalize=True)
 images = []
 make_background(window, background_image_file, window['FRAME'])
 
